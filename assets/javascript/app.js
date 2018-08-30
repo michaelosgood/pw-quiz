@@ -1,4 +1,4 @@
-//Michael Osgood / Game of Thrones Trivia Game
+//Michael Osgood / PW Quiz
 $("#start").on("click",function(){ //execute this function when the start button is clicked
 	game.start();
 })
