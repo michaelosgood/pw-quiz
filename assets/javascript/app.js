@@ -6,7 +6,6 @@ $("#start").on("click",function(){ //execute this function when the start button
 $(document).on("click","#end",function(){ //waits for page to load entirely before executing this code (done button gets created after timer runs out)
 	game.done();//exectues the game.done function when the button with #end is clicked on
 })
-var audio = new Audio("assets/audio/GameOfThrones.mp3"); //variable for theme song
 
 var questions = [{
 	question: "1. Who killed Robb Stark?",
@@ -56,7 +55,6 @@ var game = {
 	},
 	start: function() {
 		timer = setInterval(game.countdown, 1000); //every 1000 ms, the countdown function will execute
-		audio.play();//plays the Game of Thrones theme song
 		$("#subwrapper").prepend('<h2>Time Remaining: <span id="counter">120</span> Seconds</h2>'); //adds the time remaining to our html file
 		$("#start").remove(); //removes the start button after it is clicked
 		console.log("start button clicked"); //verifies that start button was clicked
